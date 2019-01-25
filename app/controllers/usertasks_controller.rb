@@ -10,4 +10,8 @@ class UsertasksController < ApplicationController
   		redirect_to tasks_path alert: 'No se ha podido ingresar su orden'
   	end
   end
+
+  def index
+  	@usertask = current_user.usertasks
+  end
 end
