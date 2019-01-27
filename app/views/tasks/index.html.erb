@@ -4,11 +4,12 @@
 		<% @tasks.each_slice(3) do |row| %>
 		  <% row.each do |task| %>
 			  <div class="col">
-			  	<div class="card">
-			  		<%= image_tag task.photo, size: '250x150' %>
+			  	<div class="card border bg-light">
+			  		<%= image_tag task.photo,class: 'mx-auto col py-2', size: '250x200'  %>
 			  		<div class="body">
 						  <h5><%= task.name %></h5>
 						  <%= link_to "Done", task_usertasks_path(task), class: 'btn btn-success', method: :post %>
+						  <%= link_to "x", task_usertasks_path(task), class: 'btn btn-danger', method: :post %>
 						</div>
 					</div>
 				</div>
