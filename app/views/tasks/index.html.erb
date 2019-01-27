@@ -5,7 +5,7 @@
 		  <% row.each do |task| %>
 			  <div class="col">
 			  	<div class="card border bg-light">
-			  		<%= image_tag task.photo,class: 'mx-auto col py-2', size: '250x200'  %>
+			  		<%= image_tag task.photo,size:'350x250',class: "card-img-top" %>
 			  		<div class="body">
 						  <h5><%= task.name %></h5>
 						  <%= link_to "Done", task_usertasks_path(task), class: 'btn btn-success', method: :post %>
